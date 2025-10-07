@@ -1,0 +1,40 @@
+---
+const {
+  title = "CS Developer & Creator",
+  subtitle = "I build fast, human-friendly tools with clean UX. Recently: bilingual clinic intake system and inventory workflow.",
+  primaryCtaHref = "/projects",
+  primaryCtaLabel = "View projects",
+  secondaryCtaHref = "/contact",
+  secondaryCtaLabel = "Contact me",
+  imgSrc = "C:\\Users\\Oliver Ramos\\personal-site\\public\\466913637_8660099390709866_2376478831405613711_n-2.jpg",       // put a file in /public/hero.jpg
+  imgAlt = "Oliver at the desk with laptop"
+} = Astro.props;
+---
+<section class="py-14 md:py-24">
+  <div class="grid items-center gap-10 md:grid-cols-2">
+    <!-- Copy -->
+    <div>
+      <h1 class="text-4xl font-bold tracking-tight md:text-5xl">
+        {title}
+      </h1>
+      <p class="mt-4 max-w-prose text-neutral-700">
+        {subtitle}
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={primaryCtaHref}
+           class="rounded-2xl bg-black px-5 py-2.5 text-white">
+          {primaryCtaLabel}
+        </a>
+        <a href={secondaryCtaHref}
+           class="rounded-2xl border px-5 py-2.5">
+          {secondaryCtaLabel}
+        </a>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="aspect-video w-full overflow-hidden rounded-2xl border bg-neutral-100">
+      <img src={imgSrc} alt={imgAlt} class="h-full w-full object-cover" loading="eager" />
+    </div>
+  </div>
+</section>

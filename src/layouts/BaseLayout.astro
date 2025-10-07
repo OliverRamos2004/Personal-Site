@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Oliver Ramos — Developer & Barber",
+  description = "I build fast, human-friendly tools and experiences.",
+  ogImage = "/og.png"
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <link rel="icon" href="/favicon.ico" />
+    <style>
+      :root { --radius: 1rem; }
+      html { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+    </style>
+  </head>
+  <body class="bg-neutral-50 text-neutral-900 antialiased">
+    <div class="min-h-dvh flex flex-col">
+      <header class="sticky top-0 backdrop-blur bg-white/70 border-b border-neutral-200 z-50">
+        <div class="mx-auto max-w-6xl px-4">
+          <slot name="nav" />
+        </div>
+      </header>
+
+      <main class="flex-1">
+        <div class="mx-auto max-w-6xl px-4">
+          <slot />
+        </div>
+      </main>
+
+      <footer class="mt-16 border-t border-neutral-200">
+        <div class="mx-auto max-w-6xl px-4">
+          <slot name="footer" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
