@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = [
+  {
+    title: "Clinic Intake System",
+    description: "A bilingual patient intake and inventory management web app built for the Montgomery County Free Clinic as part of my senior capstone.",
+    tech: "PostgreSQL, Django, React, TailwindCSS",
+    link: "#"
+  },
+  {
+    title: "Personal Website",
+    description: "This portfolio site — designed with Astro and TailwindCSS to highlight my projects, barbering work, and creative side.",
+    tech: "Astro, TailwindCSS, Vercel",
+    link: "https://oliverramos.vercel.app"
+  },
+  {
+    title: "Algorithms Visualizer",
+    description: "Python-based algorithm demos like Binary Search and Dijkstra’s Puzzle, using Matplotlib to visualize runtime and logic.",
+    tech: "Python, Matplotlib",
+    link: "#"
+  }
+];
+---
+<BaseLayout title="Projects — Oliver Ramos">
+  <Fragment slot="nav"><Navbar /></Fragment>
+
+  <section class="py-20">
+    <h1 class="text-3xl font-bold text-center mb-10">Projects & Experiments</h1>
+    <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 px-6">
+      {projects.map(project => (
+        <ProjectCard {...project} />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
