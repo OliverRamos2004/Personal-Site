@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 
+
 const {
   title = "Oliver Ramos — Developer & Barber",
   description = "I build fast, human-friendly tools and experiences.",
@@ -37,11 +38,36 @@ const {
         </div>
       </main>
 
-      <footer class="mt-16 border-t border-neutral-200">
-        <div class="mx-auto max-w-6xl px-4">
-          <slot name="footer" />
-        </div>
-      </footer>
+      <footer class="border-t py-8 mt-20 text-center text-sm text-neutral-500">
+  <div class="flex flex-col items-center gap-3">
+    <p>© {new Date().getFullYear()} Oliver Ramos. All rights reserved.</p>
+    <div class="flex gap-5">
+      <a
+        href="https://github.com/oliverramos2004"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-black transition"
+      >
+        GitHub
+      </a>
+      <a
+        href="https://www.linkedin.com/in/oliverramos1"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-black transition"
+      >
+        LinkedIn
+      </a>
+      <a
+        href="mailto:oliver78660@wabash.edu"
+        class="hover:text-black transition"
+      >
+        Email
+      </a>
+    </div>
+  </div>
+</footer>
+
     </div>
   </body>
 </html>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<BaseLayout title="About — Oliver Ramos">
+  <Fragment slot="nav"><Navbar /></Fragment>
+
+  <section class="py-20 px-6">
+    <div class="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Left: Image -->
+      <div class="aspect-square overflow-hidden rounded-2xl border bg-neutral-100">
+        <img
+          src="/about-photo.jpg"
+          alt="Oliver Ramos portrait"
+          class="h-full w-full object-cover"
+        />
+      </div>
+
+      <!-- Right: Text -->
+      <div>
+        <h1 class="text-3xl font-bold mb-4">Hi, I’m Oliver 👋</h1>
+        <p class="text-neutral-700 leading-relaxed mb-4">
+          I’m a <span class="font-medium">Computer Science major</span> and <span class="font-medium">Studio Art minor</span> at Wabash College.  
+          I love building fast, human-friendly tools that make people’s lives easier — and expressing creativity through
+          <span class="font-medium">barbering</span>, <span class="font-medium">drumming</span>, and design.
+        </p>
+
+        <p class="text-neutral-700 leading-relaxed mb-4">
+          Right now, I’m focused on my <span class="font-medium">Senior Capstone</span>: a bilingual patient intake and inventory system
+          for the Montgomery County Free Clinic. I also run a small barbering business and enjoy creating websites
+          that blend technical precision with artistic style.
+        </p>
+
+        <p class="text-neutral-700 leading-relaxed mb-6">
+          I’m always learning new technologies and exploring creative ways to connect people through design and code.
+        </p>
+
+        <div class="flex gap-3">
+          <a
+            href="https://www.linkedin.com/in/oliverramos1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rounded-2xl border px-5 py-2 font-medium hover:bg-black hover:text-white transition"
+          >
+            Connect on LinkedIn
+          </a>
+          <a
+            href="/Ramos_Oliver_Fall_2025_Resume.pdf"
+            class="rounded-2xl bg-black px-5 py-2 text-white font-medium hover:bg-neutral-800 transition"
+          >
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
