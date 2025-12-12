@@ -1,13 +1,13 @@
 ---
-import "../styles/global.css";
-
+import '../styles/global.css';
 
 const {
-  title = "Oliver Ramos — Developer & Barber",
-  description = "I build fast, human-friendly tools and experiences.",
-  ogImage = "/og.png"
+  title = 'Oliver Ramos — Developer & Barber',
+  description = 'I build fast, human-friendly tools and experiences.',
+  ogImage = '/og.png',
 } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -20,13 +20,29 @@ const {
     <meta property="og:image" content={ogImage} />
     <link rel="icon" href="/favicon.ico" />
     <style>
-      :root { --radius: 1rem; }
-      html { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+      :root {
+        --radius: 1rem;
+      }
+      html {
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Inter,
+          'Helvetica Neue',
+          Arial,
+          'Apple Color Emoji',
+          'Segoe UI Emoji';
+      }
     </style>
   </head>
   <body class="bg-neutral-50 text-neutral-900 antialiased">
     <div class="min-h-dvh flex flex-col">
-      <header class="sticky top-0 backdrop-blur bg-white/70 border-b border-neutral-200 z-50">
+      <header
+        class="sticky top-0 backdrop-blur bg-white/70 border-b border-neutral-200 z-50"
+      >
         <div class="mx-auto max-w-6xl px-4">
           <slot name="nav" />
         </div>
@@ -39,35 +55,34 @@ const {
       </main>
 
       <footer class="border-t py-8 mt-20 text-center text-sm text-neutral-500">
-  <div class="flex flex-col items-center gap-3">
-    <p>© {new Date().getFullYear()} Oliver Ramos. All rights reserved.</p>
-    <div class="flex gap-5">
-      <a
-        href="https://github.com/oliverramos2004"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hover:text-black transition"
-      >
-        GitHub
-      </a>
-      <a
-        href="https://www.linkedin.com/in/oliverramos1"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hover:text-black transition"
-      >
-        LinkedIn
-      </a>
-      <a
-        href="mailto:oliver78660@wabash.edu"
-        class="hover:text-black transition"
-      >
-        Email
-      </a>
-    </div>
-  </div>
-</footer>
-
+        <div class="flex flex-col items-center gap-3">
+          <p>© {new Date().getFullYear()} Oliver Ramos. All rights reserved.</p>
+          <div class="flex gap-5">
+            <a
+              href="https://github.com/oliverramos2004"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-black transition"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/oliverramos1"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-black transition"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:oliver78660@wabash.edu"
+              class="hover:text-black transition"
+            >
+              Email
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

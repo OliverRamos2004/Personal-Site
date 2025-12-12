@@ -1,26 +1,129 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Navbar from "../components/Navbar.astro";
-import Hero from "../components/Hero.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
 ---
-<BaseLayout title="Oliver Ramos — Portfolio" description="CS developer & creator. Fast, human-friendly tools and clean UX.">
+
+<BaseLayout
+  title="Oliver Ramos — Portfolio"
+  description="CS developer & creator. Fast, human-friendly tools and clean UX."
+>
   <Fragment slot="nav"><Navbar /></Fragment>
   <div class="relative">
-  <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(59,130,246,0.12),transparent_60%)]"></div>
+    <div
+      class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(59,130,246,0.12),transparent_60%)]"
+    >
+    </div>
     <Hero
       title="Hi, I’m Oliver — an innovative leader with experience in business ventures."
-      subtitle="I am a current senior studying Computer Science at Wabash College. Here I learned to think critically, lead effectively, and collaborate with diverse teams. I value creativity, efficiency, and community in all my projects."
+      subtitle="I am a current senior studying Computer Science at Wabash College. Here I learned to think critically, lead effectively, and collaborate with diverse teams. I value creativity, efficiency, and community in what I do."
       primaryCtaHref="/projects"
       primaryCtaLabel="View projects"
       secondaryCtaHref="/contact"
       secondaryCtaLabel="Contact me"
-      imgSrc="/index-photo.jpg"
-      imgAlt="Oliver working on a laptop with notes and sketches"
+      imgSrc="/Ramos_Oliver.jpeg"
+      imgAlt="Oliver Ramos portrait"
     />
   </div>
 
-  <!-- Keep a small spacer so the page feels finished -->
-  <section class="py-10">
-    <p class="text-neutral-600">More sections coming soon…</p>
+  <section class="py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <h2 class="text-2xl font-bold mb-2">Life, work & creativity</h2>
+      <p class="text-neutral-600 mb-8 max-w-2xl">
+        A glimpse into who I am and the things I care about.
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {
+          [
+            '/family.jpg',
+            '/ganso.jpg',
+            '/newmexico.jpg',
+            '/cutbyoliver2.jpg',
+            '/kappasig.jpg',
+            '/drums2.jpg',
+            '/cutbyoliver.jpg',
+            '/seniors.jpg',
+            // '/drums1.jpg',
+          ].map((src) => (
+            <div class="aspect-square overflow-hidden rounded-xl border bg-neutral-100">
+              <img
+                src={src}
+                alt="Photo here"
+                class="h-full w-full object-cover hover:scale-105 transition duration-300"
+                loading="lazy"
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 border-t">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <h2 class="text-2xl font-bold mb-4">What I care about</h2>
+      <p class="text-neutral-700 leading-relaxed">
+        I’m driven by creativity, clarity, and community. Whether I’m building
+        software, cutting hair, or playing music, I care about craft,
+        consistency, and creating meaningful experiences for people.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-neutral-50">
+    <div class="mx-auto max-w-4xl px-6">
+      <h2 class="text-2xl font-bold mb-6">Currently</h2>
+      <ul class="space-y-3 text-neutral-700">
+        <li>
+          📍 Senior at Wabash College, graduating December 2025, and studying
+          Computer Science
+        </li>
+        <li>
+          💻 Building a bilingual clinic intake system for the Montgomery County
+          Free Clinic (capstone)
+        </li>
+        <li>✂️ Continuing to pursue and improve my Barbering skills</li>
+        <li>🥁 Exploring and trying to break into Jazz drumming!</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="py-20">
+    <div class="mx-auto max-w-5xl px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl font-bold mb-4">Featured Project</h2>
+        <p class="text-neutral-700 mb-4">
+          Currently building a fully functional bilingual patient intake for the
+          Montgomery County Free Clinic — designed to reduce friction and
+          improve accessibility for both patients and staff.
+        </p>
+        <a
+          href="/projects"
+          class="inline-block rounded-xl bg-black px-6 py-3 text-white font-medium hover:bg-neutral-800"
+        >
+          View all projects
+        </a>
+      </div>
+      <div
+        class="aspect-video overflow-hidden rounded-2xl border bg-neutral-100"
+      >
+        <img
+          src="/moco.png"
+          alt="Clinic Intake System screenshot"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 border-t">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+      <p class="text-lg font-medium">
+        Thank you for visiting my personal site! more sections and improvements
+        coming soon.
+      </p>
+    </div>
   </section>
 </BaseLayout>
