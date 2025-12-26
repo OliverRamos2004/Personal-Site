@@ -8,15 +8,19 @@ import Hero from '../components/Hero.astro';
   title="Oliver Ramos — Portfolio"
   description="CS developer & creator. Fast, human-friendly tools and clean UX."
 >
-  <Fragment slot="nav"><Navbar /></Fragment>
+  <Navbar slot="nav" />
+
   <div class="relative">
     <div
       class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(59,130,246,0.12),transparent_60%)]"
     >
     </div>
+
     <Hero
-      title="Hi, I’m Oliver — an innovative leader with experience in business ventures."
-      subtitle="I am a current senior studying Computer Science at Wabash College. Here I learned to think critically, lead effectively, and collaborate with diverse teams. I value creativity, efficiency, and community in what I do."
+      title="Hi, I’m Oliver! I am an innovative leader with experience in full-stack development and business ventures."
+      subtitle={`I am a current senior studying Computer Science at Wabash College.
+Here I learned to think critically, lead effectively, and collaborate with diverse teams.
+I value creativity, efficiency, and community in what I do.`}
       primaryCtaHref="/projects"
       primaryCtaLabel="View projects"
       secondaryCtaHref="/contact"
@@ -76,12 +80,12 @@ import Hero from '../components/Hero.astro';
       <h2 class="text-2xl font-bold mb-6">Currently</h2>
       <ul class="space-y-3 text-neutral-700">
         <li>
-          📍 Senior at Wabash College, graduating December 2025, and studying
-          Computer Science
+          📍 I am a senior at Wabash College, graduating December 2025, and
+          studying Computer Science and Studio Art
         </li>
         <li>
           💻 Building a bilingual clinic intake system for the Montgomery County
-          Free Clinic (capstone)
+          Free Clinic using TypeScript, React, and SQL
         </li>
         <li>✂️ Continuing to pursue and improve my Barbering skills</li>
         <li>🥁 Exploring and trying to break into Jazz drumming!</li>
